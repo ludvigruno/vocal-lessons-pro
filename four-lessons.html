@@ -33,9 +33,10 @@
     </section>
     <hr />
     <section class="lesson-signup">
-      <h3>Запишитесь на индивидуальный урок вокала!</h3>
-      <form id="contact-form">
-        <div class="form-group">
+      <h2>Записаться на абонемент</h2>
+      <form id="four-lesson-form">
+          <input type="hidden" id="lesson-type" name="lesson_type" value="Абонемент на 4 урока">
+          
           <label for="name">Ваше имя:</label>
           <input type="text" id="name" name="from_name" required />
         </div>
@@ -109,11 +110,11 @@
 
     <script>
       (function () {
-        emailjs.init("8aL2nfDJJWnZpoBOG"); // Замени на свой User ID
+        emailjs.init("8aL2nfDJJWnZpoBOG");
       })();
 
       document
-        .getElementById("contact-form")
+        .getElementById("four-lesson-form")
         .addEventListener("submit", function (event) {
           event.preventDefault();
 
