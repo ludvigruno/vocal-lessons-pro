@@ -142,6 +142,20 @@
         <h3>Запишитесь на урок вокала!</h3>
         <form id="contact-form">
           <div class="form-group">
+            <label for="lesson-type">Выберите тип занятия:</label>
+            <select id="lesson-type" name="lesson_type" required>
+              <option value="Пробное занятие">Пробное занятие</option>
+              <option value="Разовое занятие">Разовое занятие</option>
+              <option value="Абонемент на 4 урока">Абонемент на 4 урока</option>
+              <option value="Абонемент на 8 уроков">
+                Абонемент на 8 уроков
+              </option>
+              <option value="Индивидуальный урок">Индивидуальный урок</option>
+              <option value="Подготовка к выступлению">
+                Подготовка к выступлению
+              </option>
+            </select>
+
             <label for="name">Ваше имя:</label>
             <input type="text" id="name" name="from_name" required />
           </div>
