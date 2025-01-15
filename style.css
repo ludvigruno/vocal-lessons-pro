@@ -30,6 +30,10 @@ p {
   font-size: 18px;
 }
 
+.nav {
+  margin-top: 20px;
+}
+
 .lesson-signup {
   max-width: 442px;
   margin: 0 auto;
