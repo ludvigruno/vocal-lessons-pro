@@ -143,7 +143,8 @@
             type="tel"
             id="phone"
             name="from_phone"
-            pattern="^\+?[0-9\s-]{7,15}$"
+            pattern="[0-9+\- ]{7,15}"
+            inputmode="numeric"
             placeholder="+7 900 123 4567"
           />
         </div>
@@ -159,6 +160,12 @@
         </button>
       </form>
     </div>
+
+    <script>
+      document.getElementById("phone").addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9+\- ]/g, ""); // Удаляет буквы автоматически
+      });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- Schema.org (Structured Data) -->
