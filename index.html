@@ -128,37 +128,50 @@
         </p>
       </div>
 
-      <form id="contact-form">
-        <div class="form-group">
-          <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="from_name" required />
-        </div>
-        <div class="form-group">
-          <label for="email">Ваш Email:</label>
-          <input type="email" id="email" name="reply_to" required />
-        </div>
-        <div class="form-group">
-          <label for="phone">Ваш телефон:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="from_phone"
-            pattern="[0-9+\- ]{7,15}"
-            inputmode="numeric"
-            placeholder="+7 900 123 4567"
-          />
-        </div>
-        <div class="form-group">
-          <label for="message">Ваше сообщение:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
+      <div>
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A25291ea04213ae124f810b8d4c77cc5bd514c5a2e33aa60d558509dfcd06fd78&amp;source=constructor"
+          width="367"
+          height="326"
+          frameborder="0"
+        ></iframe>
+      </div>
 
-        <!-- Кнопка с текстом и лоадером -->
-        <button type="submit" id="submit-btn">
-          <span id="btn-text">Отправить</span>
-          <span id="btn-loader" class="hidden"></span>
-        </button>
-      </form>
+      <hr />
+      <div class="lesson-signup">
+        <h3>Запишитесь на индивидуальный урок вокала</h3>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Ваше имя:</label>
+            <input type="text" id="name" name="from_name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Ваш Email:</label>
+            <input type="email" id="email" name="reply_to" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Ваш телефон:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="from_phone"
+              pattern="[0-9+\- ]{7,15}"
+              inputmode="numeric"
+              placeholder="+7 900 123 4567"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Ваше сообщение:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+
+          <!-- Кнопка с текстом и лоадером -->
+          <button type="submit" id="submit-btn">
+            <span id="btn-text">Отправить</span>
+            <span id="btn-loader" class="hidden"></span>
+          </button>
+        </form>
+      </div>
     </div>
 
     <script>
