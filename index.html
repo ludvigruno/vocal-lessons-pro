@@ -205,6 +205,10 @@
           btnText.textContent = "Отправка...";
           btnLoader.classList.remove("hidden");
 
+          // ОТПРАВКА ЦЕЛИ В ЯНДЕКС МЕТРИКУ
+          ym(99534141, "reachGoal", "form_submit");
+          console.log("🎯 Цель form_submit отправлена в Яндекс Метрику!");
+
           emailjs
             .sendForm("service_xkjjzl9", "template_hue43vi", this)
             .then(() => {
