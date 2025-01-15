@@ -30,6 +30,12 @@ p {
   font-size: 18px;
 }
 
+.lesson-signup {
+  max-width: 442px;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
+
 .contact-info {
   margin-top: 20px;
 }
