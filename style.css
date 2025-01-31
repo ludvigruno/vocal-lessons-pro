@@ -5,6 +5,10 @@ body {
   text-align: center;
   height: 100vh; /* Заполняет весь экран */
   margin: 0; /* Убирает отступы */
+
+  /* background-image: url('preview.jpg');
+  background-size: cover;
+  background-position: center; */
 }
 
 h1,
@@ -13,6 +17,10 @@ h3,
 p,
 label {
   color: #000; /* Черный цвет для лучшей читаемости */
+}
+
+.img {
+  width: 100px;
 }
 
 .container {
