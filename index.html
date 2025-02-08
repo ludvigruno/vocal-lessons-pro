@@ -37,7 +37,7 @@
     <link rel="icon" type="image/png" href="favicon.png" />
 
     <!-- Подключение CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
     <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WR5015ZYQ"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-3WR5015ZYQ'); </script>
                                     
   </head>
@@ -52,7 +52,7 @@
 
       <div class="about">
         <!-- <img src="file:///C:/projects/vocal-lessons-pro/preview.jpg" width="100" alt="Уроки вокала в Санкт-Петербурге"> -->
-        <img src="https://vocal-lessons-pro.ru/preview.webp" width="100" height="100" alt="Уроки вокала в Санкт-Петербурге" loading="lazy">
+        <img src="https://vocal-lessons-pro.ru/preview.webp" width="100" height="100" alt="Уроки вокала в Санкт-Петербурге" title="Обучение вокалу у Марии Стульбы" loading="lazy">
         <h2>Обучение вокалу у профессионального педагога</h2>
         <p><strong>Привет! Меня зовут Мария Стульба.</strong></p>
         <p>
@@ -152,12 +152,55 @@
         </p>
       </div>
       <div>
-        <iframe
+
+        <div id="map" style="width: 100%; height: 400px;"></div>
+
+        <script>
+          let mapLoaded = false;
+        
+          function loadYandexMap() {
+              if (mapLoaded) return;
+              mapLoaded = true;
+        
+              let script = document.createElement("script");
+              script.src = "https://api-maps.yandex.ru/2.1/?apikey=ТВОЙ_API_КЛЮЧ&lang=ru_RU";
+              script.onload = function () {
+                  ymaps.ready(initMap);
+              };
+              document.body.appendChild(script);
+          }
+        
+          function initMap() {
+              let myMap = new ymaps.Map("map", {
+                  center: [59.932378, 30.321042], // Санкт-Петербург
+                  zoom: 10
+              });
+        
+              myMap.geoObjects.add(new ymaps.Placemark([59.932378, 30.321042], {
+                  hintContent: "Мы здесь!",
+                  balloonContent: "Приходите на уроки вокала!"
+              }));
+          }
+        
+          // Проверяем, когда карта становится видимой
+          let observer = new IntersectionObserver((entries) => {
+              if (entries[0].isIntersecting) {
+                  loadYandexMap();
+                  observer.disconnect(); // Отключаем, чтобы не вызывалось повторно
+              }
+          });
+        
+          observer.observe(document.querySelector("#map"));
+        </script>
+        
+
+        <!-- <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3A25291ea04213ae124f810b8d4c77cc5bd514c5a2e33aa60d558509dfcd06fd78&amp;source=constructor"
           width="367"
           height="326"
           frameborder="0"
-        ></iframe>
+          loading="lazy"
+        ></iframe> -->
       </div>
 
       <hr />
@@ -206,7 +249,7 @@
           </div>
 
           <!-- Кнопка с текстом и лоадером -->
-          <button type="submit" id="submit-btn">
+          <button type="submit" id="submit-btn" aria-label="Отправить заявку на урок">
             <span id="btn-text">Отправить</span>
             <span id="btn-loader" class="hidden"></span>
           </button>
@@ -235,12 +278,6 @@
       </p>
       <p>Адрес: Санкт-Петербург, Казанская улица, 7</p>
     </footer>
-
-    <!-- <script>
-      document.getElementById("phone").addEventListener("input", function () {
-        this.value = this.value.replace(/[^0-9+\- ]/g, ""); // Удаляет буквы автоматически
-      });
-    </script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!-- Schema.org (Structured Data) -->
