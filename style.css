@@ -32,6 +32,7 @@ label {
 
 
 .container {
+  position: relative;
   display: flex;
   gap: 30px;
   max-width: 1200px;
@@ -59,6 +60,7 @@ label {
   flex: 1;
   min-width: 50%;
   flex-wrap: wrap;
+  z-index: 0;
 }
 
 p {
@@ -205,6 +207,7 @@ button:hover {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1;
 }
 
 .main-content {
@@ -319,4 +322,79 @@ button:hover {
     width: 100%;
     order: -1;
   }
+}
+
+
+/* Скрываем sidebar на мобильных устройствах */
+/* Кнопка "Совет" */
+
+.sidebar {
+  overflow-y: auto;
+  max-height: 100vh; /* Ограничение высоты */
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #1c2227;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar-toggle:hover {
+  background: #162b54;
+}
+
+/* По умолчанию крестик скрыт */
+.sidebar-close {
+  display: none;
+  position: absolute;
+  top: -6px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 17px;
+  color: white;
+  cursor: pointer;
+  width: 100px;
+}
+
+/* Стили для мобильной версии */
+@media (max-width: 768px) {
+  .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 100%;
+      background: black;
+      padding: 20px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 999;
+  }
+
+  .sidebar-toggle {
+    background: #1e3c72;
+  }
+  
+  .sidebar.active {
+      transform: translateX(0);
+  }
+
+  .sidebar-close {
+      display: block;
+  }
+}
+
+/* Блокируем прокрутку body */
+.no-scroll {
+  overflow: hidden;
 }

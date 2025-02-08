@@ -40,26 +40,51 @@
     </header>
 
     <main class="content">
+      <div class="sidebar-toggle">Совет</div>
       <aside class="sidebar">
+        <button class="sidebar-close">&times;</button>
         <div class="sidebar-section">
           <h3>Советы по вокалу</h3>
           <div class="article-preview">
             <h4>Правильное дыхание во время пения</h4>
             <p>Пение — это не просто талант, а навык, который можно развивать. Главное — правильное дыхание, расслабленное горло и регулярная практика.</p>
-            <span class="article-date">07.02.2025</span>
-            <span class="article-author">Автор: Мария Стульба</span>
+            <div class="article-meta">
+              <span class="article-date">07.02.2025</span>
+              <span class="article-author">Автор: Мария Стульба</span>
+            </div>
           </div>
+    
           <div class="article-preview">
-            <h4>Дыхательные упражнения для работы с резонаторами</h4>
-            <p>Перед началом вокальной тренировки сделайте 5 минут дыхательных упражнений. Это поможет улучшить контроль над голосом и избежать напряжения.</p>
-            <span class="article-date">08.02.2025</span>
-            <span class="article-author">Автор: Мария Стульба</span>
+            <h4>Развитие резонаторов через дыхательные упражнения</h4>
+            <p>Перед вокальной тренировкой выполняйте дыхательные упражнения, чтобы усилить работу резонаторов, улучшить звучание и избежать голосового напряжения.</p>
+            <div class="article-meta">
+              <span class="article-date">08.02.2025</span>
+              <span class="article-author">Автор: Мария Стульба</span>
+            </div>
           </div>
         </div>
+    
+        <!-- <div class="sidebar-section">
+          <h3>Добавить новую статью</h3>
+          <form class="article-form">
+            <input type="text" placeholder="Заголовок статьи" required>
+            <textarea placeholder="Текст статьи" rows="4" required></textarea>
+            <input type="date" required>
+            <button type="submit">Опубликовать</button>
+          </form>
+        </div> -->
       </aside>
+
     <div class="main-content">
     <section class="about">
-      <img src="https://vocal-lessons-pro.ru/preview.jpg" width="100" alt="Индивидуальный урок вокала">
+      <picture>
+        <source srcset="https://vocal-lessons-pro.ru/preview.webp" type="image/webp">
+        <img src="https://vocal-lessons-pro.ru/preview.jpg" 
+            width="367" height="326" 
+            alt="Индивидуальный урок вокала" 
+            title="Обучение вокалу у Марии Стульбы" 
+            loading="lazy">
+      </picture>
       <h2>Что включает индивидуальный урок?</h2>
       <ul>
         <li>Анализ текущего уровня вокала</li>
@@ -275,6 +300,8 @@
         accurateTrackBounce: true,
       });
     </script>
+
+<script src="sidebar-toggle.js"></script>
     <noscript
       ><div>
         <img
