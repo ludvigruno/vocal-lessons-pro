@@ -19,8 +19,15 @@ label {
   color: #000; /* Черный цвет для лучшей читаемости */
 }
 
-.img {
-  width: 100px;
+img {
+  width: 300px;
+  height: 200px;
+}
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('font.woff2') format('woff2');
+  font-display: swap;
 }
 
 .container {
