@@ -19,10 +19,10 @@ label {
   color: #000; /* Черный цвет для лучшей читаемости */
 }
 
-img {
-  width: 300px;
-  height: 200px;
-}
+/* img {
+  width: 367px;
+  height: 326px;
+} */
 
 @font-face {
   font-family: 'CustomFont';
