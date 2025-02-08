@@ -24,4 +24,25 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.remove("no-scroll");
     });
 
+
+    function moveRightSidebarContent() {
+        const rightSidebar = document.querySelector(".right-sidebar");
+        const mobileContainer = document.querySelector(".right-sidebar-content-mobile");
+    
+        if (window.innerWidth <= 768) {
+            if (rightSidebar && mobileContainer) {
+                mobileContainer.innerHTML = rightSidebar.innerHTML;
+            }
+        } else {
+            if (mobileContainer) {
+                mobileContainer.innerHTML = ""; // Убираем перенос, если снова десктоп
+            }
+        }
+    }
+    
+    // Вызываем при загрузке и при изменении размера экрана
+    moveRightSidebarContent();
+    window.addEventListener("resize", moveRightSidebarContent);
+    
+
 });

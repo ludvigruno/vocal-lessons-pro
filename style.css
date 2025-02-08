@@ -9,6 +9,7 @@ body {
   /* background-image: url('preview.jpg');
   background-size: cover;
   background-position: center; */
+  background: #1c2227;
 }
 
 h1,
@@ -17,6 +18,29 @@ h3,
 p,
 label {
   color: #000; /* Черный цвет для лучшей читаемости */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  background: #1e3c72;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+footer {
+  background: #1e3c72;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+  border-top: 4px solid #333;
 }
 
 /* img {
@@ -35,7 +59,7 @@ label {
   position: relative;
   display: flex;
   gap: 30px;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   /* margin: 50px auto; */
   margin: 0 auto;
   background: #fff;
@@ -68,9 +92,9 @@ p {
   font-size: 18px;
 }
 
-.nav {
+/* .nav {
   margin-top: 20px;
-}
+} */
 
 .lesson-signup {
   max-width: 442px;
@@ -333,11 +357,31 @@ button:hover {
   max-height: 100vh; /* Ограничение высоты */
 }
 
+
+/* Левый сайдбар */
+.left-sidebar {
+  order: -1; /* Чтобы был слева */
+}
+
+/* Правый сайдбар */
+.right-sidebar {
+  order: 1;
+}
+
+@media (max-width: 768px) {
+  .right-sidebar {
+      display: none;
+  }
+}
+
 .sidebar-toggle {
   position: fixed;
-  top: 10px;
+  top: 2px;
   left: 10px;
-  background: #1c2227;
+  display: flex;
+  height: 13px;
+  align-items: center;
+  background: #1e3c72;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -345,7 +389,8 @@ button:hover {
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
-  z-index: 1000;
+  height: 13px;
+  z-index: 3;
 }
 
 .sidebar-toggle:hover {
@@ -381,10 +426,6 @@ button:hover {
       z-index: 999;
   }
 
-  .sidebar-toggle {
-    background: #1e3c72;
-  }
-  
   .sidebar.active {
       transform: translateX(0);
   }
