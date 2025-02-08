@@ -32,69 +32,88 @@
       <p>Погружение в мир вокала: 4 занятия для раскрытия вашего потенциала!</p>
     </header>
 
-    <section class="about">
-      <img src="https://vocal-lessons-pro.ru/preview.jpg" width="100" alt="Абонемент на 4 урока вокала в Санкт-Петербурге">
-      <h2>Что входит в абонемент?</h2>
-      <ul>
-        <li>Индивидуальная программа обучения</li>
-        <li>Постановка дыхания и контроль голосовых связок</li>
-        <li>Работа над диапазоном и чистотой интонации</li>
-        <li>Разбор сложных вокальных фраз и приемов</li>
-        <li>Постепенное развитие навыков с возможностью записи прогресса</li>
-      </ul>
-    </section>
-    <hr />
-     <div class="contact-info">
-      <h3>🌐 Мои профили на профессиональных площадках</h3>
-      <p>🔹 <a href="https://music.apple.com/ru/album/%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D0%BE%D0%BC%D0%B0%D1%8F/1775237918?i=1775237920&ls" target="_blank">Слушайте мою песню в Apple Music</a></p>
-      <p>🔹 <a href="https://www.avito.ru/sankt-peterburg/predlozheniya_uslug/uroki_vokala_dlya_vzросlyh_i_detey_2301216406" target="_blank">Мой профиль на Avito</a></p>
-      <p>🔹 <a href="https://spb.repetitors.info/repetitor/p/StulbaMV/" target="_blank">Repetitors.info</a></p>
-      <p>🔹 <a href="https://spb.needspec.ru/artisty/profile/stulba-mariya?utm_referrer=https%3A%2F%2Fwww.google.com%2F" target="_blank">Needspec</a></p>
-      <p>🔹 <a href="https://www.afisha.ru/people/mariya-stulba-380917/" target="_blank">Афиша</a></p>
-      <p>🔹 <a href="https://zoon.ru/spb/p-artist/mariya_stulba/" target="_blank">Zoon</a></p>
-      </div>
-    <hr />
-    <section class="lesson-signup">
-      <h2>Записаться на абонемент</h2>
-      <form id="four-lesson-form">
-          <input type="hidden" id="lesson-type" name="lesson_type" value="Абонемент на 4 урока">
-          
-          <label for="name">Ваше имя:</label>
-          <input type="text" id="name" name="from_name" required />
+    <main class="content">
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <h3>Советы по вокалу</h3>
+          <div class="article-preview">
+            <h4>Правильное дыхание во время пения</h4>
+            <p>Пение — это не просто талант, а навык, который можно развивать. Главное — правильное дыхание, расслабленное горло и регулярная практика.</p>
+            <span class="article-date">07.02.2025</span>
+            <span class="article-author">Автор: Мария Стульба</span>
+          </div>
+          <div class="article-preview">
+            <h4>Дыхательные упражнения для работы с резонаторами</h4>
+            <p>Перед началом вокальной тренировки сделайте 5 минут дыхательных упражнений. Это поможет улучшить контроль над голосом и избежать напряжения.</p>
+            <span class="article-date">08.02.2025</span>
+            <span class="article-author">Автор: Мария Стульба</span>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="email">Ваш Email:</label>
-          <input type="email" id="email" name="reply_to" required />
-        </div>
-        <div class="form-group">
-          <label for="phone">Ваш телефон:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="from_phone"
-            pattern="[0-9+\- ]{7,15}"
-            inputmode="numeric"
-            placeholder="+7 900 123 4567"
-          />
-        </div>
-        <div class="form-group">
-          <label for="message">Ваше сообщение:</label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
+      </aside>
+    <div class="main-content">
+        <section class="about">
+          <img src="https://vocal-lessons-pro.ru/preview.jpg" width="100" alt="Абонемент на 4 урока вокала в Санкт-Петербурге">
+          <h2>Что входит в абонемент?</h2>
+          <ul>
+            <li>Индивидуальная программа обучения</li>
+            <li>Постановка дыхания и контроль голосовых связок</li>
+            <li>Работа над диапазоном и чистотой интонации</li>
+            <li>Разбор сложных вокальных фраз и приемов</li>
+            <li>Постепенное развитие навыков с возможностью записи прогресса</li>
+          </ul>
+        </section>
 
-        <!-- Кнопка с текстом и лоадером -->
-        <button type="submit" id="submit-btn">
-          <span id="btn-text">Отправить</span>
-          <span id="btn-loader" class="hidden"></span>
-        </button>
-      </form>
-    </section>
+        <div class="contact-info">
+          <h3>🌐 Мои профили на профессиональных площадках</h3>
+          <p>🔹 <a href="https://music.apple.com/ru/album/%D0%BD%D0%B5%D0%B2%D0%B5%D1%81%D0%BE%D0%BC%D0%B0%D1%8F/1775237918?i=1775237920&ls" target="_blank">Слушайте мою песню в Apple Music</a></p>
+          <p>🔹 <a href="https://www.avito.ru/sankt-peterburg/predlozheniya_uslug/uroki_vokala_dlya_vzросlyh_i_detey_2301216406" target="_blank">Мой профиль на Avito</a></p>
+          <p>🔹 <a href="https://spb.repetitors.info/repetitor/p/StulbaMV/" target="_blank">Repetitors.info</a></p>
+          <p>🔹 <a href="https://spb.needspec.ru/artisty/profile/stulba-mariya?utm_referrer=https%3A%2F%2Fwww.google.com%2F" target="_blank">Needspec</a></p>
+          <p>🔹 <a href="https://www.afisha.ru/people/mariya-stulba-380917/" target="_blank">Афиша</a></p>
+          <p>🔹 <a href="https://zoon.ru/spb/p-artist/mariya_stulba/" target="_blank">Zoon</a></p>
+          </div>
+        <hr />
+        <section class="lesson-signup">
+          <h2>Записаться на абонемент</h2>
+          <form id="four-lesson-form">
+              <input type="hidden" id="lesson-type" name="lesson_type" value="Абонемент на 4 урока">
+              <label for="name">Ваше имя:</label>
+              <input type="text" id="name" name="from_name" required />
+            <div class="form-group">
+              <label for="email">Ваш Email:</label>
+              <input type="email" id="email" name="reply_to" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Ваш телефон:</label>
+              <input
+                type="tel"
+                id="phone"
+                name="from_phone"
+                pattern="[0-9+\- ]{7,15}"
+                inputmode="numeric"
+                placeholder="+7 900 123 4567"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Ваше сообщение:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <!-- Кнопка с текстом и лоадером -->
+            <button type="submit" id="submit-btn">
+              <span id="btn-text">Отправить</span>
+              <span id="btn-loader" class="hidden"></span>
+            </button>
+          </form>
+        </section>
+  </div>
+  </main>
 
     <footer style="background: #1e3c72; color: #fff; padding: 20px; text-align: center; margin-top: 20px; border-top: 4px solid #333;">
       <p>&copy; 2025 Vocal Lessons PRO. Все права защищены.</p>
       <p>Свяжитесь с нами: <a href="mailto:stwill@yandex.ru" style="color: #fff; text-decoration: underline;">stwill@yandex.ru</a></p>
       <p>Адрес: Санкт-Петербург, Казанская улица, 7</p>
-  </footer>
+    </footer>
 
 
     <script>
