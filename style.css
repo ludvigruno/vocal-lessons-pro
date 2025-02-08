@@ -5,6 +5,7 @@ body {
   text-align: center;
   height: 100vh; /* Заполняет весь экран */
   margin: 0; /* Убирает отступы */
+  margin-top: 37px;
 
   /* background-image: url('preview.jpg');
   background-size: cover;
