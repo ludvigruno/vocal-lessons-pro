@@ -36,6 +36,9 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="font.woff2" crossorigin="anonymous">
+
     <!-- Подключение CSS -->
     <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
     <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-3WR5015ZYQ"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-3WR5015ZYQ'); </script>
@@ -52,7 +55,17 @@
 
       <div class="about">
         <!-- <img src="file:///C:/projects/vocal-lessons-pro/preview.jpg" width="100" alt="Уроки вокала в Санкт-Петербурге"> -->
-        <img src="https://vocal-lessons-pro.ru/preview.webp" width="100" height="100" alt="Уроки вокала в Санкт-Петербурге" title="Обучение вокалу у Марии Стульбы" loading="lazy">
+        <picture>
+          <source srcset="https://vocal-lessons-pro.ru/preview.webp" type="image/webp">
+          <img src="https://vocal-lessons-pro.ru/preview.jpg" 
+               width="367" height="326" 
+               alt="Уроки вокала в Санкт-Петербурге" 
+               title="Обучение вокалу у Марии Стульбы" 
+               loading="lazy">
+        </picture>
+        
+        
+   
         <h2>Обучение вокалу у профессионального педагога</h2>
         <p><strong>Привет! Меня зовут Мария Стульба.</strong></p>
         <p>
