@@ -37,7 +37,7 @@
     <link rel="icon" type="image/png" href="favicon.png" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="font.woff2" crossorigin="anonymous">
+    <!-- <link rel="preload" as="font" type="font/woff2" href="font.woff2" crossorigin="anonymous"> -->
 
     <!-- Подключение CSS -->
     <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
@@ -176,7 +176,7 @@
               mapLoaded = true;
         
               let script = document.createElement("script");
-              script.src = "https://api-maps.yandex.ru/2.1/?apikey=ТВОЙ_API_КЛЮЧ&lang=ru_RU";
+              script.src = "https://api-maps.yandex.ru/2.1/?apikey=52a46b40-9370-4e5e-8278-9f7382df311f&lang=ru_RU";
               script.onload = function () {
                   ymaps.ready(initMap);
               };
