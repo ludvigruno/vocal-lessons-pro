@@ -1,7 +1,8 @@
 import { sendToYandexMetrika } from "./yandex-metrika.js";
 
+// Разрешаем только цифры, +, -, пробел
 document.getElementById("phone").addEventListener("input", function () {
-  this.value = this.value.replace(/[^0-9+\- ]/g, ""); // Очищаем ввод
+  this.value = this.value.replace(/[^0-9+\- ]/g, "");
 });
 
 // Инициализация emailJS
@@ -12,12 +13,34 @@ document.getElementById("phone").addEventListener("input", function () {
 document.getElementById("contact-form").addEventListener("submit", async function (event) {
   event.preventDefault();
 
-  let submitBtn = document.getElementById("submit-btn");
-  let btnText = document.getElementById("btn-text");
-  let btnLoader = document.getElementById("btn-loader");
+  const submitBtn = document.getElementById("submit-btn");
+  const btnText = document.getElementById("btn-text");
+  const btnLoader = document.getElementById("btn-loader");
+
+  const emailInput = document.getElementById("email");
+  const phoneInput = document.getElementById("phone");
 
   if (!submitBtn || !btnText || !btnLoader) {
     console.error("❌ Ошибка: кнопка или лоадер не найдены.");
+    return;
+  }
+
+  // === Проверка e-mail ===
+  const email = emailInput.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("❌ Пожалуйста, введите корректный адрес электронной почты.");
+    emailInput.focus();
+    return;
+  }
+
+  // === Проверка телефона ===
+  const phone = phoneInput.value.trim();
+  // Разрешаем минимум 7 цифр, допускаем +, -, пробелы
+  const phoneDigits = phone.replace(/[^0-9]/g, "");
+  if (phoneDigits.length < 7) {
+    alert("❌ Пожалуйста, введите настоящий номер телефона (не менее 7 цифр).");
+    phoneInput.focus();
     return;
   }
 
