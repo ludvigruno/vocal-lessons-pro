@@ -5,6 +5,9 @@ document.getElementById("phone").addEventListener("input", function () {
   this.value = this.value.replace(/[^0-9+\- ]/g, "");
 });
 
+// === Проверка honeypot ===
+const botField = document.querySelector('input[name="bot-field"]');
+
 // Инициализация emailJS
 (function () {
   emailjs.init("8aL2nfDJJWnZpoBOG");
@@ -25,6 +28,11 @@ document.getElementById("contact-form").addEventListener("submit", async functio
     return;
   }
 
+  if (botField && botField.value.trim() !== "") {
+  console.warn("⚠️ Бот обнаружен — форма не отправлена.");
+  return; // форма не отправляется, пользователь не видит ошибок
+  }
+  
   // === Проверка e-mail ===
   const email = emailInput.value.trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
