@@ -5,9 +5,6 @@ document.getElementById("phone").addEventListener("input", function () {
   this.value = this.value.replace(/[^0-9+\- ]/g, "");
 });
 
-// === Проверка honeypot ===
-const botField = document.querySelector('input[name="bot-field"]');
-
 // Инициализация emailJS
 (function () {
   emailjs.init("8aL2nfDJJWnZpoBOG");
@@ -22,6 +19,9 @@ document.getElementById("contact-form").addEventListener("submit", async functio
 
   const emailInput = document.getElementById("email");
   const phoneInput = document.getElementById("phone");
+
+  // === Проверка honeypot ===
+  const botField = document.getElementById("bot")
 
   if (!submitBtn || !btnText || !btnLoader) {
     console.error("❌ Ошибка: кнопка или лоадер не найдены.");
